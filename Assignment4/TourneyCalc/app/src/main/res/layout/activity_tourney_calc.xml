@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.gatech.seclass.tourneycalc.TourneyCalcActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="497dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="6dp">
+
+        <TextView
+            android:id="@+id/entranceFeeL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="28dp"
+            android:text="Entrance Fee:" />
+
+        <EditText
+            android:id="@+id/entranceFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@+id/entranceFeeL"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/EntrantsNumberL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/entrantsNumber"
+            android:layout_alignBottom="@+id/entrantsNumber"
+            android:layout_alignStart="@+id/entranceFeeL"
+            android:text="Entrants Number:" />
+
+        <EditText
+            android:id="@+id/entrantsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/entranceFee"
+            android:layout_below="@+id/entranceFee"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/HousePercentageL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/EntrantsNumberL"
+            android:layout_below="@+id/entrantsNumber"
+            android:layout_marginTop="24dp"
+            android:text="HousePercentage" />
+
+        <EditText
+            android:id="@+id/housePercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/entrantsNumber"
+            android:layout_below="@+id/entrantsNumber"
+            android:layout_marginTop="11dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/HousePercentageL"
+            android:layout_below="@+id/housePercentage"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="22dp"
+            android:onClick="handleClick"
+            android:text="SHOW ME THE PRIZES" />
+
+        <TextView
+            android:id="@+id/prizesAndProfitsL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/buttonCalculate"
+            android:layout_below="@+id/buttonCalculate"
+            android:layout_marginTop="21dp"
+            android:text="Prizes and Profits"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/houseCutL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/prizesAndProfitsL"
+            android:layout_below="@+id/prizesAndProfitsL"
+            android:layout_marginTop="23dp"
+            android:text="House Cut:" />
+
+        <EditText
+            android:id="@+id/houseCutValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/prizesAndProfitsL"
+            android:layout_marginTop="11dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/prizeL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/firstPrizeValue"
+            android:layout_alignStart="@+id/HousePercentageL"
+            android:text="Prize:" />
+
+        <TextView
+            android:id="@+id/firstL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/prizeL"
+            android:layout_alignBottom="@+id/prizeL"
+            android:layout_alignStart="@+id/houseCutL"
+            android:text="1st:" />
+
+        <EditText
+            android:id="@+id/firstPrizeValue"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/houseCutValue"
+            android:layout_marginTop="34dp"
+            android:layout_toEndOf="@+id/entranceFeeL"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/secondL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/firstL"
+            android:layout_alignBottom="@+id/firstL"
+            android:layout_centerHorizontal="true"
+            android:text="2nd" />
+
+        <EditText
+            android:id="@+id/secondPrizeValue"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/secondL"
+            android:layout_toEndOf="@+id/secondL"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/thirdL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/secondL"
+            android:layout_toEndOf="@+id/prizesAndProfitsL"
+            android:text="3rd" />
+
+        <EditText
+            android:id="@+id/thirdPrizeValue"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/thirdL"
+            android:layout_toEndOf="@+id/thirdL"
+            android:ems="10"
+            android:inputType="textPersonName" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
